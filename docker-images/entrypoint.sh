@@ -48,7 +48,6 @@ else
     content_server=$content_server"    listen ${USE_LISTEN_PORT};\n"
     content_server=$content_server'    location / {\n'
     content_server=$content_server'        include uwsgi_params;\n'
-    content_server=$content_server'        uwsgi_pass :9001;\n'
     content_server=$content_server'        uwsgi_pass unix:///tmp/uwsgi.sock;\n'
     content_server=$content_server'    }\n'
     content_server=$content_server'}\n'
